@@ -1,0 +1,238 @@
+/* Cognizant exercise: External stylesheet with comments and proper formatting */
+
+/* Universal selector */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-primary: #0f766e;
+  --brand-secondary: #f59e0b;
+  --brand-accent: #134e4a;
+  --brand-surface: #fffaf2;
+  --brand-text: #1f2937;
+  --brand-muted: #6b7280;
+  --brand-border: rgba(15, 118, 110, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--brand-text);
+  background:
+    linear-gradient(180deg, rgba(255, 250, 242, 0.92), rgba(240, 249, 255, 0.96)),
+    url('https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1800&q=80') center/cover fixed;
+}
+
+/* Element selectors */
+header,
+main,
+section,
+footer {
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* Grouping selectors */
+a,
+button,
+input,
+select,
+textarea {
+  transition: all 0.25s ease;
+}
+
+/* Class selectors */
+.site-header .navbar {
+  background: linear-gradient(90deg, var(--brand-accent), var(--brand-primary));
+}
+
+.navbar-brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.7rem;
+  letter-spacing: 0.04em;
+  font-weight: 700;
+}
+
+.hero-banner {
+  min-height: 90vh;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  color: #ffffff;
+  background: linear-gradient(135deg, rgba(15, 118, 110, 0.95), rgba(19, 78, 74, 0.86));
+}
+
+.hero-chip {
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  letter-spacing: 0.04em;
+}
+
+.hero-panel {
+  backdrop-filter: blur(10px);
+  border-radius: 1.25rem;
+}
+
+.section-block {
+  padding: 5rem 0;
+}
+
+.section-alt {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.72), rgba(255, 250, 242, 0.82));
+}
+
+.section-title {
+  margin-bottom: 0.75rem;
+  font-size: clamp(2rem, 3vw, 2.75rem);
+}
+
+.gallery-card img {
+  height: 220px;
+  object-fit: cover;
+}
+
+.info-stack {
+  border-left: 5px solid var(--brand-secondary) !important;
+}
+
+.site-footer {
+  color: #ffffff;
+  background: linear-gradient(90deg, var(--brand-accent), var(--brand-primary));
+}
+
+/* ID selectors */
+#formMessage {
+  border-radius: 0.85rem;
+}
+
+#eventsGrid .card {
+  border: 1px solid var(--brand-border);
+}
+
+#geoOutput,
+#nearestEvent,
+#charCount {
+  font-weight: 700;
+}
+
+/* Link styling */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--brand-secondary);
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.88) !important;
+  border-radius: 999px;
+  padding-inline: 1rem !important;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.14);
+  color: #ffffff !important;
+}
+
+/* List styling */
+ul.list-unstyled li {
+  padding: 0.2rem 0;
+}
+
+/* Table styling */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-bg-type: rgba(15, 118, 110, 0.04);
+}
+
+/* Box model */
+.card,
+.btn,
+.form-control,
+.form-select,
+textarea {
+  border-radius: 1rem;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus {
+  border-color: var(--brand-primary);
+  box-shadow: 0 0 0 0.2rem rgba(15, 118, 110, 0.18);
+}
+
+/* Multi-column layout */
+#eventsGrid .event-features {
+  column-count: 2;
+  column-gap: 1.25rem;
+}
+
+#eventsGrid .event-features li {
+  break-inside: avoid;
+}
+
+/* Responsive design using media queries */
+@media (max-width: 991.98px) {
+  .hero-banner {
+    min-height: auto;
+    padding-top: 7rem;
+  }
+
+  .section-block {
+    padding: 4rem 0;
+  }
+
+  #eventsGrid .event-features {
+    column-count: 1;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-banner {
+    text-align: center;
+  }
+
+  .hero-banner .d-flex {
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
+  .nav-link {
+    padding-inline: 0.75rem !important;
+  }
+}

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Local Community Event Portal for Cognizant Digital Nurture Module 1 exercises." />
+  <title>Local Community Event Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" integrity="sha512-1ycn6IcaQQ40/MKB4Imkb9F8C4q4t5r8F1p0k0p3p9K8m4Q5Qb8i1zQf5Jzv7xkM2xL4p5K5s0b0e6pN1K0ZQw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Cognizant exercise: Semantic HTML structure + internal page links + responsive navbar -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top shadow-sm">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home"><i class="fa-solid fa-people-group me-2"></i>Community Portal</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+            <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+            <li class="nav-item"><a class="nav-link" href="#register">Register</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Cognizant exercise: Welcome banner using id and class -->
+    <section id="home" class="hero-banner d-flex align-items-center">
+      <div class="container py-5">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-7">
+            <span class="hero-chip mb-3 d-inline-flex align-items-center gap-2"><i class="bi bi-calendar2-event"></i> Local Community Event Portal</span>
+            <h1 class="display-4 fw-bold mb-3">Connect, volunteer, and celebrate your neighborhood.</h1>
+            <p class="lead mb-4">A single-page portal built for Cognizant Digital Nurture Module 1 exercises using HTML5, CSS3, JavaScript, Bootstrap 5, and jQuery.</p>
+            <div class="d-flex flex-wrap gap-3">
+              <a class="btn btn-primary btn-lg" href="#register">Register Now</a>
+              <button class="btn btn-outline-light btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#aboutModal">Learn More</button>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="hero-panel card border-0 shadow-lg p-4">
+              <p class="text-uppercase small fw-semibold mb-2 text-primary">Today’s Highlight</p>
+              <h2 class="h4 mb-3">Community Clean-Up & Food Drive</h2>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><i class="bi bi-geo-alt-fill me-2 text-primary"></i> Central Park, Downtown</li>
+                <li class="mb-2"><i class="bi bi-clock-fill me-2 text-primary"></i> Saturday, 9:00 AM</li>
+                <li><i class="bi bi-people-fill me-2 text-primary"></i> Open for families, students, and volunteers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cognizant exercise: Bootstrap grid system + dynamic event rendering -->
+    <section id="events" class="section-block">
+      <div class="container">
+        <div class="row align-items-end mb-4">
+          <div class="col-lg-8">
+            <h2 class="section-title">Upcoming Community Events</h2>
+            <p class="text-muted mb-0">Rendered dynamically with JavaScript arrays, objects, and DOM manipulation.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+            <button id="refreshEventsBtn" class="btn btn-outline-primary" type="button"><i class="bi bi-arrow-repeat me-2"></i>Refresh Events</button>
+          </div>
+        </div>
+        <div id="eventsGrid" class="row g-4"></div>
+      </div>
+    </section>
+
+    <!-- Cognizant exercise: Image gallery -->
+    <section id="gallery" class="section-block section-alt">
+      <div class="container">
+        <div class="row mb-4">
+          <div class="col-lg-8">
+            <h2 class="section-title">Event Gallery</h2>
+            <p class="text-muted mb-0">A responsive gallery using Bootstrap cards, flexbox utilities, and internal page links.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-sm-6 col-lg-3"><figure class="gallery-card card h-100 border-0 shadow-sm"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Volunteers collaborating at a local event" /><figcaption class="card-body">Volunteer coordination and community support.</figcaption></figure></div>
+          <div class="col-sm-6 col-lg-3"><figure class="gallery-card card h-100 border-0 shadow-sm"><img src="https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Community fitness session in the park" /><figcaption class="card-body">Fitness workshops and public wellness sessions.</figcaption></figure></div>
+          <div class="col-sm-6 col-lg-3"><figure class="gallery-card card h-100 border-0 shadow-sm"><img src="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Crowd enjoying a cultural performance" /><figcaption class="card-body">Cultural performances and live local talent.</figcaption></figure></div>
+          <div class="col-sm-6 col-lg-3"><figure class="gallery-card card h-100 border-0 shadow-sm"><img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Community food distribution event" /><figcaption class="card-body">Food drives and social impact initiatives.</figcaption></figure></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cognizant exercise: Video section -->
+    <section id="video" class="section-block">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <h2 class="section-title">Community Spotlight Video</h2>
+            <p class="text-muted">A lightweight embedded video section for event promotion and awareness.</p>
+            <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
+              <video controls poster="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?auto=format&fit=crop&w=1200&q=80"><source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />Your browser does not support the video tag.</video>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="info-stack card border-0 shadow-sm p-4 mb-3"><h3 class="h5 mb-2">Why this portal matters</h3><p class="mb-0">It demonstrates semantic layout, accessibility-friendly components, and interactive registration workflows.</p></div>
+            <div class="info-stack card border-0 shadow-sm p-4"><h3 class="h5 mb-2">Exercise checklist</h3><p class="mb-0">Bootstrap utilities, responsive media, and content areas are all integrated into one coherent experience.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cognizant exercise: Event registration form + validation + onchange/onblur/oninput/ondblclick/key events -->
+    <section id="register" class="section-block section-alt">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="card shadow-lg border-0 overflow-hidden">
+              <div class="card-header bg-primary text-white p-4"><h2 class="section-title text-white mb-1">Event Registration Form</h2><p class="mb-0 opacity-75">Form validation, DOM interaction, local/session storage, and character counter.</p></div>
+              <div class="card-body p-4 p-lg-5">
+                <form id="registrationForm" class="needs-validation" novalidate>
+                  <div class="row g-3">
+                    <div class="col-md-6"><label for="fullName" class="form-label">Full Name</label><input type="text" class="form-control" id="fullName" placeholder="Enter your name" required onblur="handleBlur(this)" /><div class="invalid-feedback">Please enter your full name.</div></div>
+                    <div class="col-md-6"><label for="email" class="form-label">Email</label><input type="email" class="form-control" id="email" placeholder="name@example.com" required onchange="handleInputChange(this)" /><div class="invalid-feedback">Please enter a valid email address.</div></div>
+                    <div class="col-md-6"><label for="phone" class="form-label">Phone</label><input type="tel" class="form-control" id="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required /><div class="invalid-feedback">Enter a 10-digit phone number.</div></div>
+                    <div class="col-md-6"><label for="eventType" class="form-label">Event Type</label><select class="form-select" id="eventType" required onchange="handleEventTypeChange(this)"><option value="" selected disabled>Select an event</option></select><div class="invalid-feedback">Please select an event.</div></div>
+                    <div class="col-md-6"><label for="eventDate" class="form-label">Preferred Date</label><input type="date" class="form-control" id="eventDate" required /><div class="invalid-feedback">Please choose a date.</div></div>
+                    <div class="col-md-6"><label for="attendees" class="form-label">Number of Attendees</label><input type="number" class="form-control" id="attendees" min="1" max="25" value="1" required /><div class="invalid-feedback">Select between 1 and 25 attendees.</div></div>
+                    <div class="col-12"><label for="message" class="form-label d-flex align-items-center justify-content-between gap-3"><span>Special Requests</span><small class="text-muted"><span id="charCount">0</span>/200</small></label><textarea class="form-control" id="message" rows="4" maxlength="200" placeholder="Dietary needs, accessibility requests, or volunteering notes" onkeyup="updateCharacterCount(this)" ondblclick="clearMessage(this)"></textarea></div>
+                    <div class="col-12 d-flex flex-wrap align-items-center gap-3 mt-2"><button type="submit" class="btn btn-primary"><i class="bi bi-check2-circle me-2"></i>Submit Registration</button><button type="button" id="saveDraftBtn" class="btn btn-outline-secondary">Save Draft</button><button type="button" id="loadDraftBtn" class="btn btn-outline-secondary">Load Draft</button><button type="button" id="clearDraftBtn" class="btn btn-outline-danger">Clear Draft</button></div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div id="formMessage" class="alert alert-info mt-4 d-none" role="alert"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cognizant Exercise: Bootstrap accordion -->
+    <section id="faq" class="section-block section-alt">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <p class="section-kicker mb-2">Accordion section</p>
+            <h2 class="section-title mb-3">Frequently asked questions</h2>
+            <div class="accordion shadow-sm rounded-4 overflow-hidden" id="faqAccordion">
+              <div class="accordion-item"><h2 class="accordion-header" id="faqOneHeader"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">How do I submit the registration form?</button></h2><div id="faqOne" class="accordion-collapse collapse show" aria-labelledby="faqOneHeader" data-bs-parent="#faqAccordion"><div class="accordion-body">Fill in the fields, choose an event, add an optional message, and click Submit Registration to save the details.</div></div></div>
+              <div class="accordion-item"><h2 class="accordion-header" id="faqTwoHeader"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">Where is my draft saved?</button></h2><div id="faqTwo" class="accordion-collapse collapse" aria-labelledby="faqTwoHeader" data-bs-parent="#faqAccordion"><div class="accordion-body">Draft data is stored in SessionStorage, and confirmed registrations are stored in LocalStorage.</div></div></div>
+              <div class="accordion-item"><h2 class="accordion-header" id="faqThreeHeader"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">What browser features are demonstrated?</button></h2><div id="faqThree" class="accordion-collapse collapse" aria-labelledby="faqThreeHeader" data-bs-parent="#faqAccordion"><div class="accordion-body">The portal demonstrates geolocation, fetch, async/await, DOM manipulation, Bootstrap utilities, and jQuery interactions.</div></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cognizant exercise: Geolocation API + tables + flexbox utilities -->
+    <section id="contact" class="section-block">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <h2 class="section-title">Find Nearby Events</h2>
+            <p class="text-muted">Use the browser geolocation API to discover nearby opportunities.</p>
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <button id="geoBtn" class="btn btn-success" type="button"><i class="bi bi-geo-alt-fill me-2"></i>Detect My Location</button>
+              <button id="toastBtn" class="btn btn-outline-primary" type="button" onclick="showBannerNote()">Show Welcome Note</button>
+            </div>
+            <div class="card border-0 shadow-sm p-4">
+              <p class="mb-2"><strong>Coordinates:</strong> <span id="geoOutput">Not detected yet</span></p>
+              <p class="mb-0"><strong>Nearest Suggestion:</strong> <span id="nearestEvent">Community Fair</span></p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <h2 class="section-title">Event Schedule</h2>
+            <div class="table-responsive shadow-sm rounded">
+              <table class="table table-striped table-hover align-middle mb-0">
+                <thead class="table-dark"><tr><th scope="col">Event</th><th scope="col">Date</th><th scope="col">Location</th><th scope="col">Status</th></tr></thead>
+                <tbody id="scheduleTable"><tr><td>Community Clean-Up</td><td>Saturday</td><td>Central Park</td><td><span class="badge text-bg-success">Open</span></td></tr><tr><td>Food Drive</td><td>Sunday</td><td>City Hall</td><td><span class="badge text-bg-primary">Register</span></td></tr></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3"><p class="mb-0">Local Community Event Portal</p><p class="mb-0">Built for Cognizant Digital Nurture Module 1</p></div>
+  </footer>
+
+  <!-- Cognizant exercise: Bootstrap modal popup -->
+  <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="aboutModalLabel">About This Portal</h5><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div><div class="modal-body">This project demonstrates HTML5 semantic layout, CSS3 styling, JavaScript features, Bootstrap 5 components, and jQuery interactions in one page.</div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button></div></div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
